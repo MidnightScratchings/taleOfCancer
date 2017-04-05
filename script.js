@@ -5,6 +5,8 @@ $(document).ready(function() {
 
 	var ch1 = 0;
 	var ch2 = 0;
+	var ch3 = 0;
+	var ch4 = 0;
 
 	// a branch
 	$(".stay").click(function() {
@@ -73,7 +75,7 @@ $(document).ready(function() {
 		if(ch1 == 0) {
 			console.log("Choice one complete");
 
-			$(".dia").append('<p>"H-" you choke and you eyes roll. "H-hel.." the world sways, swallowing you whole. It rumbles as thuder roars above you, echoing boots\' march. <br> You awaken to the cry of lightning flashing in a swiftly closed doorway, accompanied by a blurry order for retrieval of some sort. Your chest heaves, forcing mud up to your lips and sending you sputtering. The platform you lie on is a raised metal table with a fur blanket drawn up to your shoulders. Tears openly stream from your eyes, obscuring your vision with obscene blurriness. <br> "Finally, you\'re awake." a man with dark leathery skin hovers above your head, his hawk-like nose glaring down at you. You can ask <span class="ch">WHERE</span> you are, <span class="ch">WHAT</span> happened, or <span class="ch">WHO</span> the man is.</p>');
+			$(".dia").append('<br><br><br><p>"H-" you choke and you eyes roll. "H-hel.." the world sways, swallowing you whole. It rumbles as thuder roars above you, echoing boots\' march. <br> You awaken to the cry of lightning flashing in a swiftly closed doorway, accompanied by a blurry order for retrieval of some sort. Your chest heaves, forcing mud up to your lips and sending you sputtering. The platform you lie on is a raised metal table with a fur blanket drawn up to your shoulders. Tears openly stream from your eyes, obscuring your vision with obscene blurriness. <br> "Finally, you\'re awake." a man with dark leathery skin hovers above your head, his hawk-like nose glaring down at you. You can ask <span class="ch">WHERE</span> you are, <span class="ch">WHAT</span> happened, or <span class="ch">WHO</span> the man is.</p>');
 
 			$(".dia").append('<div class="choice"><h3 class="whereB">WHERE</h3></div>');
 			$(".dia").append('<div class="choice"><h3 class="whatB">WHAT</h3></div>');
@@ -90,12 +92,61 @@ $(document).ready(function() {
 
 					$(".dia").append('<p>“W-where…” you heave again, throwing your head to the side and spilling mud across his leather slippers. The man\'s grimace radiated from his body in waves. He shakes it off, sending dark mucus across the ornamental rug. “I see you\'re awake. You\'re in Storrho Castle, I am head sage Ionio. I\'ve been taking care of you for the past hour or so.” Ionio moves from your side a shelf beyond your vision, glass vials singing into his hands. Your body refuses to shift, besides your eyes that roll every once in awhile. A soft pounding takes to your head, soon accompanied by Ionio\'s well-worn hands which adjusts your temples to face up towards his crooked nose. “Where are you from, Stranger?” he asks as one of his fingers points straight down at your eye, and begins to glow with a warm yellow light. You can <span class="ch">LIE</span> and stutter some fake town or you can tell the <span class="ch">TRUTH</span>.</p>');
 
+					$(".dia").append('<div class="choice"><h3 class="lieb1">LIE</h3></div>');
+					$(".dia").append('<div class="choice"><h3 class="truthb1">TRUTH</h3></div>');
+
 					$(".whereB").remove();
 					$(".whatB").remove();
 					$(".whoB").remove();
 
 					ch2 = 1;
-				}
+
+					$(".lieb1").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“I-I...” you stutter, taking in a massive, painful breath. Heaving again, the sage rolls his eyes and trains his unsympathetic gaze onto you. “You find me an idiot, do you?” his formerly gentle hands come slamming down onto your shoulders, sending you gasping. “You\'re hiding something, Stranger. And for stranger who lie, especially in <em>this castle</em>, they must be punished." he raises a thumb, glowing with an eerie purple light, and presses it against your forehead. A scream of agony erupts from your lips, your eyes falling blind once more. When you awake, you lie on cold cobblestones enclosed in iron bars, and the leather slippers of Ionio. Your eyes travel up his robe made of fur pelts and leather straps, and his hooked nose and piercing gold eyes. His arms are folded, his eyebrows furrowed in hidden fury. “The only reason you are not dead or thrown out is out of curiosity of the chapel.” he growls softly, and leaves. You can <span class="ch">CALL</span> after him or <span class="ch">SEARCH</span> your cell.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="call">CALL</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="search">SEARCH</h3></div>');
+
+							$(".lieb1").remove();
+							$(".truthb1").remove();
+
+							ch3 = 1;
+
+							$(".call").click(function() {
+								if(ch4 == 0) {
+									console.log("Last choice complete");
+
+									$(".dia").append('<p>“Wait!” you yell, surprised at the strength of your voice. You hear a frustrated groan and the scuffle of feet. He reappears in front of your cell with obvious fury that drips to the floor like acid. “I don\'t know where I\'m fro-" you begin standing, but are forced down by a sudden pain in your chest. A gasp escapes your lips as you crumble to the ground, your body falling into spasms. You can hear Ionio yelling for guards as you curl into a twitching ball. The dank cell is soon lit by a golden glow, and you scream as you realize the light peers out from cracks in your skin. You roar, a hissing sound within your body rising higher and higher until… white.</p>');
+
+									$(".dia").append('<br><h2>Curiosity Will Kill the Cat <span class="ch">(Ending 1/24)</span></h2>');
+
+									$(".call").remove();
+									$(".search").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".search").click(function() {
+								if(ch4 == 0) {
+									console.log("Last choice complete");
+
+									$(".dia").append('<p>You struggle to your feet, your hand outstretched to the wall in case you fall. The cell is quite sparse, with a bucket for a toilet and a similar wooden bench for resting and sleeping. A rusting faucet peers around from a crack in the wall, dripping water onto the stones with a clockwork melody. You begin to stumble towards the bench when a sharp pain stabs you into the chest. You cry out, falling to your knees, and Ionio does not return. Agony spreads through your body, a cheerful yellow glow filling the cell. To your horror, the light peers out from cracks in your skin. You roar, a hissing sound within your body rising higher and higher until… white.</p>');
+
+									$(".dia").append('<br><h2>Destructive Alone <span class="ch">(Ending 2/24)</span></h2>');
+
+									$(".call").remove();
+									$(".search").remove();
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
+				};
 			});
 
 			$(".whatB").click(function() {
@@ -128,3 +179,5 @@ $(document).ready(function() {
 		};
 	});
 });
+
+// how to end: $(".dia").append('<br><h2><span class="ch"></span></h2>');
