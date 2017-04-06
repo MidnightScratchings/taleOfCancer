@@ -201,12 +201,105 @@ $(document).ready(function() {
 
 					$(".dia").append('<p>“W-wha...” your chest heaves, but you pucker your lips to prevent an overspill. The man pulls the blanket up to your chin, nodding with a rather blank face. A hum exits his lips as his slippers hiss across the floor, glass vials from a distant cupboard tumbling into his hands. “You collapsed in the middle of the street. You\'re not malnourished, it\'s a cool day, and water is falling from the sky. Do you recall any illnesses that might cause such things?” You can tell the <span class="ch">TRUTH</span> and say you don\'t know, or <span class="ch">LIE</span>.</p>');
 
+					$(".dia").append('<div class="choice"><h3 class="truthb2">TRUTH</h3></div>');
+					$(".dia").append('<div class="choice"><h3 class="lieb2">LIE</h3></div>');
+
 					$(".whereB").remove();
 					$(".whatB").remove();
 					$(".whoB").remove();
 
 					ch2 = 1;
-				}
+
+					$(".truthb2").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>You shake your head, the pressure on your chest lessening. His silence grips your throat, your heart beating in unison with his returning footsteps. Liquid sloshes around in a glass vial he holds, the color of sulphur. “Open your mouth, please.” he says quietly. You part your lips, which he supports with his finger to pry them open wider. The liquid tastes and feels like maple syrup, but as it leaves your tongue it burns in pricks and prods. “What did it taste like?” You see no reason to lie. You answer with a shaking breath, and the man’s bright eyes go wide. He sets his supplies down on a nearby table and motions for you to get up. “Ever heard of cancer, Stranger? It developed in the higher up cities, where there is metal as far as the eye can see.” he helps you prop yourself up. “It has no cure, while it kills you slowly and agonizingly. When your time is up, you begin to explode. The light of the medical bombshell in your body shines through your skin, then, boom.” he snaps his fingers. “It will not only take your life, but the lives of others. Look, you don’t have long. You can either <span class="ch">TRAVEL</span> as fast as you can away from civilization or I can bring you to the <span class="ch">LAKE</span> nearby, where you can safely detonate underwater. It\'s your choice.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="travel">TRAVEL</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="lake">LAKE</h3></div>');
+
+							$(".truthb2").remove();
+							$(".lieb2").remove();
+
+							ch3 = 1;
+
+							$(".travel").click(function() {
+								if(ch4 = 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“I would rather leave here before I make anymore trouble.” you reply, surprised at the strength in your voice. The man nods solemnly, then helps you to your feet. You cannot keep track of the endless cobblestone hallways as you wind downwards to the main room. The rain spatters on the overly large doorstep, and the man offers to take you to the lake once more. You politely decline, and carry on your way out of the town, which is surrounded by dense forests. About a mile out, a sharp pain strikes through your chest, causing you to stumble in your tracks. Pangs of loneliness laced with bile worms its way up your throat, pulling you to your knees, then to your stomach. You bite your tongue to stifle a cry, and before your very eyes your skin begins to crack and glow a yellow light. You curl into a ball, and close your eyes, allowing Death to take you twice; once for your illness, second for your loneliness.</p>');
+
+									$(".dia").append('<br><h2>A Ghost\'s Passing <span class="ch">(Ending 5/24)</span></h2>');
+
+									$(".travel").remove();
+									$(".lake").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".lake").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“Take me to the lake. Please.” you add, surprised by the strength in your voice along. It is however, laced with sorrow that the man catches on to. He holds out his hand, which you grasp and stumble onto your feet. “Ionio. Head Sage of the Storrho Castle.” you nod gratefully. Ionio braces you, practically dragging you across the cobblestones as you struggle to find your footing. A small crowd of lesser sages clad in furs and skins gather around you, whispers and words of comfort and curiosity. You walk maybe half a mile before coming to a deep blue lake, where the sages trail off into silence. You stand on the rocky shore and watch Ionio’s robes drift behind him as he retrieves a strongly built wooden boat. He draws it close to you, gestures for the lesser sages to stay as you climb in. Thunder roars above you as the storm weeps for you, the lake sloshing against the keel. It all falls silent as you come to the center of it, where it marks your grave. The small following stands at attention on the bank, cloaks turned against the wind and rain. You stand, your legs wobbly but strong. Ionio’s hand flies to your forearm, his gaze catching yours in intimate sorrow for a stranger. His words fall silent upon your ears, and you nod. The final step you take falls upon chilling waters, the lake swallowing you whole. You tumble, turning towards the bottom and pushing yourself down further. Your chest compresses and light seeps into the dark depths. Yellow shines out from cracks in your skin, salt claws at your eyes, air burning into dust in your throat. You flip over, the grey sky barely visible through the lake. You close your eyes, and allow the vicious arms of Death take you thrice; once for your illness, second for the water that fills your lungs, third for the hole you left in the head sage\'s soul.</p>');
+
+									$(".dia").append('<br><h2>Two Deaths with One Stone <span class="ch">(Ending 6/24)</span></h2>');
+
+									$(".travel").remove();
+									$(".lake").remove();
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
+
+					$(".lieb2").click(function() {
+						if(ch3  == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“B-blood…” you rasp, your chest settling. “Bad blood...” the man nods, peeling the fur blanket off your sweat coated skin. “Very well,” he concludes. “I will show you out, Stranger.” you twist your body, allowing your feet to find the cool cobblestone floor. The man graciously offers a supporting arm, which you accept lest you sprawl across the floor. He leads you to the massive front door of the castle, nodding his adieus with a worried glance. The rain soon enough soaks your clothes and hair, chilling you to the bone. As you look out upon the town, you notice a large crowd flocking to a small tavern which glows with a warm fireplace. You can choose to go to the <span class="ch">TAVERN</span> or get out of the <span class="ch">TOWN</span>.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="tavern">TAVERN</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="town">TOWN</h3></div>');
+
+							$(".truthb2").remove();
+							$(".lieb2").remove();
+
+							ch3 = 1;
+
+							$(".tavern").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>Mud swallows your feet as you wobble your way to the tantalizing warmth of the tavern, named Dark Horse Inn. The raucous, but welcoming rattle of the crowd wraps around you as your feet trail muddy footprints onto the smooth wood floor. The scent of alcohol mingles with the thick reek of sweat. You cough as your lungs contract, your body collapsing into a chair like a ragdoll. A busty waitress sways towards you, inquiring for an order with programmed flirtation. You can barely muster a couple muttered words before pain prickles across your skin like micro thorns, and a warm yellow light drips into the tavern. The waitress’s eyes go wide, and she screams. “Clear out! Clear out! King\'s Suicide! King\'s Suicide!" the laughter turns bitter and horrified as bodies scramble for the exit, echoing the waitress\'s last words. You try to raise your voice over the din, but instead a guttural cry of agony rises through your lips. The glow increases, your skin breaking into cracks like desert floors shining with yellow light. You scream, your vision obscured by tears, then… white.</p>');
+
+									$(".dia").append('<br><h2>King\'s Suicide<span class="ch">(Ending 7/24)</span></h2>');
+
+									$(".tavern").remove();
+									$(".town").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".town").click(function() {
+								console.log("Final choice complete");
+
+								$(".dia").append('<p>You wave your thanks to the man, who in return closes the door to the castle. The mud sucks at your feet, raindrops replacing the sweat that had lingered on your skin minutes before. You sigh, and begin to stumble towards the gate where you had collapsed before. The same guards stand perfectly straight, their faces devoid of emotion properly. You sway once more, their eyes turning to you. Your chest compresses, the gloom lit by a slight yellow glow. The guards’ statue-like stature breaks into fear and horror, and they cry to nearby onlookers: “King\'s Suicide! King\'s Suicide!" they bolt, sending damp clouds of mud in your direction like shovels would into graves. You fall onto your back, the grey sky an empty canvas. Your skin breaks into small sections, yellow light shining through said cracks like desert floor. You scream weakly, agony spreading through your body then… white.</p>');
+
+								$(".dia").append('<br><h2>King\'s Mystery <span class="ch">(Ending 8/24)</span></h2>');
+
+								$(".tavern").remove();
+								$(".town").remove();
+
+								ch4 = 1;
+							});
+						};
+					});
+				};
 			});
 
 			$(".whoB").click(function() {
