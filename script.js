@@ -32,12 +32,101 @@ $(document).ready(function() {
 
 					$(".dia").append('<p>Your lips part, words wheezing away. “W-where…?” your stomach heaves before you can continue, and you toss your head aside as muddy acid drips onto the wood floors, barely distinguishable under all the dirt that blankets every surface. A bony hand rests upon your back, gently holding you. The gesture is warm, sending slow shivers of relaxation through your whole body. You return to your original position, your eyes slipping closed in exhaustion. “You\'re in my humble home, love…” her voice is like old paper passed between worn hands, gentle and elderly in soul and eyes, not in body or heart. “You collapsed in the middle of the road. Have too many drinks, eh?” You can nod and <span class="ch">LIE</span>, or shake your head and tell the <span class="ch">TRUTH</span>.</p>');
 				
+					$(".dia").append('<div class="choice"><h3 class="lieA1">LIE</h3></div>');
+					$(".dia").append('<div class="choice"><h3 class="truthA1">TRUTH</h3></div>');
+
 					$(".whereA").remove();
 					$(".whatA").remove();
 					$(".whoA").remove();
 
 					ch2 = 1;
-				}
+
+					$(".lieA1").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>You nod faintly, a smile drawing across your cheeks, even a chuckle dancing on your lips. The woman rasps a laugh softly, her chest rumbling with light humor. She moves away, almost waddling with her tan clothes disappearing into the similar brown tones of the room. “Can you stand?” she calls, sharp thumps suggesting she was cutting something. You can <span class="ch">LIE</span> and say yes, or tell the <span class="ch">TRUTH</span> and say no.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="lieA2">LIE</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="truthA2">TRUTH</h3></div>');
+
+							$(".lieA1").remove();
+							$(".truthA1").remove();
+
+							ch3 = 1;
+
+							$(".lieA2").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“I-I can…” you say, your voice gaining strength. Gravity cries as you lift yourself up, bare feet dangling over the floor as you cast aside the blanket and carefully avoid the sludge you summoned. You cast a glance towards the woman, whose back is turned. She stands at a wooden table, chopping what seems to be carrots. You mumble you thanks and goodbyes as you stand, finding your socks and shoes near the molding plank of a door, which you push open gently and step out into the gloomy world. The guards still stand to attention, this time casting wary grimaces in your direction. You raise a hand in greeting as you pass over the town border. The trees arch over you, though giving way to the relentless torrent of rain that bombard your skin. Birds call out to you, sending a smile to your face. Such an expression turns sour as they leap into flight, frightened. Your stomach jerks you to your knees, a cry escaping your lips. Sulphurous light screams across the dull world, shining from cracks upon your skin. Your head is wrenched up to the sky, the rain gifting you no comfort as agony races upon your broken flesh. The world becomes terribly white, your ears ringing as your body gives way.</p>');
+
+									$(".dia").append('<br><h2>Childish Strength <span class="ch">(Ending 13/24)</span></h2>');
+
+									$(".lieA2").remove();
+									$(".truthA2").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".truthA2").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>You shake your head, withholding another slew of sludge. “No…” you mumble weakly. The thumps cease, uneasy silence sending eerie chills through the room. The woman waddled over again, her arms wrapping around you as she gently cradled you upwards. “It\'s been a long time since I\'ve seen my children..." she whispers softly, tears flooding into her voice to leave her eyes dry. Your body sways, eyes gently closed. Her body is warm as she sits on the bed that holds you. “The dirt beneath the feet of our enemy has their blood now… their bones.” she adds solemnly. Cold chills are countered with fire-like pain licking at your skin. “My life has no rhyme nor reason. I am old, the end is here at the door for you and me.” her body hums and creaks with joints long used. “No drinks have touched your lips; your body is corrupt with cancer, my child… abandoned by your home, mind vacant…” a whimper escapes your lips as the pain doubles, and as your eyes open wide in some sort of struggle your flesh cracks like the desert floor, flooding the room with a sulphurous yellow light. Your vision flashed white, and before your ears fell deaf in the end the woman’s voice sobbed softly in your mind: “I will see you again…”</p>');
+
+									$(".dia").append('<br><h2>The Favor <span class="ch">(Ending 14/24)</span></h2>');
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
+
+					$(".truthB1").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“N-no ma\'am...” you croak, squeezing your eyes shut in a valiant effort to keep your stomach from working its way up your throat. Her eyes go wide, then soft and sullen. “Stay for the night,” she pleads gently. “You must rest.” You may <span class="ch">STAY</span> or <span class="ch">LEAVE</span>.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="staya">STAY</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="leavea">LEAVE</h3></div>');
+
+							$(".lieA1").remove();
+							$(".truthA1").remove();
+
+							ch3 = 1;
+
+							$(".staya").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>You nod thankfully, a relaxed sigh escaping your chest. Her face twitches into a smile as she turns away, slightly waddling to a counter in a corner of the room. Soon the space is filled with the luscious smell of beef stew, the heartbeat of a knife slicing into carrots, potatoes, and meat. Your vision slips in and out of childish delirium; the woman\'s warm embrace lifting you to sit, even warmer stew gently pulling your eyelids down. Vague flashes of memories suggested you hadn’t felt this… comfortable, in a long, long time. Such dreams softened the blades of pain that had dug at your flesh from the beginning. The worn spoon that was held in your hand slipped through your fingers in sleepy clumsiness, deep breaths echoing in your chest. The woman murmured words of a long forgotten lullaby, then spoke quiet words. “The ribbons of cancer holding your wings have been cut, love… fly, soar to my sons… I will remember your graciousness… thank you.” the calm blackness was replaced with a bright flash of white, and you flew.</p>');
+
+									$(".dia").append('<br><h2>Flight of a Fallen Angel <span class="ch">(Ending 15/24)</span></h2>');
+
+									$(".staya").remove();
+									$(".leavea").remove();
+
+									ch4 =1;
+								};
+							});
+
+							$(".leavea").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“I… should go,” you say, swallowing acidic spittle to lie down your punctuality. The woman, laugh lines softened in solemn acceptance, nodded in finality and stepped away from the table you rested upon. Throwing the wool blanket aside, you stepped down from your resting place, bare feet unsure but soon balanced. You find your socks and shoes by the disintegrating door, which you carefully push open and exit the home. It is only at this time you turn to notice that the residence is only a hut in the slums and your mind becomes laden with pity that you only had words of thanks that slipped your lips now to give, not services nor pennies. Rain continued to pour in sheets, the mud yearning for an unattended boot. As you pass by the guards at the gates, they give you a curt nod as they would anyone, and you wave. It was startling how normal everything was, and how memories would not resurface. The trees arched overhead, failing to protect you from the relentless precipitation. You halt, daggers of pain dulled by the overwhelming sense of calm. When your vision turns white, you welcome it.</p>');
+
+									$(".dia").append('<br><h2>Struggle Not <span class="ch">(Ending 16/24)</span></h2>');
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
+				};
 			});
 
 			$(".whatA").click(function() {
@@ -50,8 +139,43 @@ $(document).ready(function() {
 					$(".whatA").remove();
 					$(".whoA").remove();
 
+					$(".dia").append('<div class="choice"><h3 class="chicken">CHICKEN</h3></div>');
+					$(".dia").append('<div class="choice"><h3 class="stew">STEW</h3></div>');
+
 					ch2 = 1;
-				}
+
+					$(".chicken").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“Chicken,” you manage, your mouth revived with gentle saliva thinking of such an item. “Good choice. I\'m well-renowned in this town for being the best chicken roaster.” the woman says with slight sarcasm, chuckling softly as she shuffles around the room and grabbing herbs from nooks and crannies. When you find the strength to sit up, careful to avoid the pile of sludge on the dirt coated floor, the room smells of rosemary and sizzling fat. Such a welcoming scent brings a smile to your face, and even larger one once it touches your tongue. The woman tells of her boys, both long killed in a war you do not recall, though her blushing cheeks ring of nostalgia and not of grief. “I see the food helped your mobility,” she comments as you wobble over to the worn counters to set your finished plate down. “Do you mind taking a helping to the waiter at the local inn? I do it every night, since he\'s such a nice man… however, my back is not what it used to be.” she laughs softly. You can say <span class="ch">YES</span> or <span>NO</span>.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="yes">YES</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="no">NO</h3></div>');
+
+							$(".chicken").remove();
+							$(".stew").remove();
+
+							ch3 = 1;
+						};
+					});
+
+					$(".stew").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“S-stew,” you stutter, your voice gaining back its luster. “Good choice,” she says with a chuckle, muffled thumps of a knife slicing into vegetables and meat soon filling the room. You wince as you slowly brace yourself with your arms, twisting so your body to allow you bare feet to dangle over the floor. Careful to avoid the dark sludge, you stand. You spend a good hour exploring the the kitchen, which besides the bed, is the only noticeable thing about the home, which is more of a small room with a roof. As she cooks, the woman talks about her boys and how they passed away in a war you do not recall. She asks what you’re doing in the town, named Joro, but you shake your head. The scents that fill the air keep both of you happy and upbeat, even happier when you cradle a bowl of the stuff and savor the taste. Whether you are starving or not, the meal is delicious. “I deliver stew to the Sages\' castle near here. Can you take a bowl to them?" the woman asks nonchalantly. You can say <span class="ch">YES</span> or <span class="ch">NO</span>.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="yes2">YES</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="no2">NO</h3></div>');
+
+							$(".chicken").remove();
+							$(".stew").remove();
+
+							ch3 = 1;
+						};
+					});
+				};
 			});
 
 			$(".whoA").click(function() {
@@ -60,14 +184,43 @@ $(document).ready(function() {
 
 					$(".dia").append('<p>“W-who...” you stutter, your chest struggling with gravity. Her kind hand warmed your shoulder, though it was tinged with a bitterness. “It doesn\'t matter… you collapsed in the street, and I am caring for you.” she pauses to let that sink in. “Who are you, since you are so intent on learning who I am?” You can <span class="ch">LIE</span> and tell of a person you made up, or tell the <span class="ch">TRUTH</span> and say that you don\'t know.</p>');
 
+					$(".dia").append('<div class="choice"><h3 class="lieA3">LIE</h3></div>');
+					$(".dia").append('<div class="choice"><h3 class="truthA3">TRUTH</h3></div>');
+
 					$(".whereA").remove();
 					$(".whatA").remove();
 					$(".whoA").remove();
 
 					ch2 = 1;
-				}
+
+					$(".lieA3").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“My name is Alex, and I am from a city far from here--” “Where exactly, <em>Alex</em>? she asks sweetly.  You stutter in shock: “New York.” The look on her face is absurdly confused, then stone cold. “Get out of my home, drunkard.” You can <span class="ch">PROTEST</span> or get <span class="ch">OUT</span>.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="protest">PROTEST</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="out">OUT</h3></div>');
+
+							ch3 = 1;
+						};
+					});
+
+					$(".truthA3").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“I…” you swallow rancid bile that had wormed its way up your throat and continue softly. “I don\'t know who I am, or really where I am…” the woman sighs quietly, resting a gentle hand on your shoulder. “I know someone who can help… we can go <span>NOW</span> while we think of it, or we can <span>WAIT</span> until morning when you\'re rested and recovered. Your choice."</p>');
+
+							$(".dia").append('<div class="choice"><h3 class=""></h3></div>');
+							$(".dia").append('<div class="choice"><h3 class=""></h3></div>');
+
+							ch3 = 1;
+						};
+					});
+				};
 			});
-		}
+		};
 	});
 
 	// b branch
@@ -307,6 +460,8 @@ $(document).ready(function() {
 					console.log("Choice two complete");
 
 					$(".dia").append('<p>“W-who…” your chest heaves, threatening to spill dark mucus onto the ornamental rug. The man rolls his eyes, moving out of your vision. “It is of no importance to you, Stranger. Tell me, where do you hail from?” paper rustles on a wooden table as he asks said question. You can say you\'re from the <span class="ch">CITY</span> or from the <span class="ch">COUNTRY</span>.</p>');
+
+					
 
 					$(".whereB").remove();
 					$(".whatB").remove();
