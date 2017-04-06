@@ -146,6 +146,52 @@ $(document).ready(function() {
 							});
 						};
 					});
+
+					$(".truthb1").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“I-I don-” your chest heaves and you throw your head to the side to cough up more mud. It slaps the cobblestone floor, accompanied with an aura of Ionio\'s grimace. His hand gently rests on your back, where he pressed his thumb and slowly massages. “Do not speak anymore; I understand.” he pauses, your breath mellowing slowly. “However, I must ask you to come with me. It doesn\'t hurt to be cautious.” Ionio\'s arms sweep you onto your feet, his fur robe clinging to your sweat coated skin. You attempt to walk upon the cooling cobblestone floors and ornamental rugs, but your escort moreorless carries you. The stairs spiral down into endless depths, hallways swallowing soft voices and spitting out distant echoes. You all to soon are laid down upon a wooden bed in a vacant cell in the castle’s lower levels with Ionio\'s face hovering anxiously stern above yours. “Do you need anything?” he asks soft, though his voice rings uncomfortably in your ears. You can ask him to <span class="ch">STAY</span> or <span class="ch">DISMISS</span> him to any other duties he has.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="stayb">STAY</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="dismiss">DISMISS</h3></div>');
+
+							$(".lieb1").remove();
+							$(".truthb1").remove();
+
+							ch3 = 1;
+
+							$(".stayb").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“Just stay for a while, okay?” you whisper, your voice surprisingly strong. The sage nods, confusion flashing upon his bright eyes. The cell is well kept, besides the leaking faucet in the corner that keeps to a rhythm like clockwork. Your eyes train themselves exhaustively onto the ancient stone ceiling, your breathing speeding up even as your body loses all control and goes limp. You can hear Ionio asking with some desperation about your condition, and the room begins to glow a terrible yellow, little lightning patterns breaking out onto your skin shining with such light. The sage barks something indecipherable, a blue globe surrounding the two of you. You scream in agony before the man slaps a hand across your mouth, sobs wracking his body. The desolate whine in your body increases, and increases, until… white.</p>');
+
+									$(".dia").append('<br><h2>The Death of Two <span class="ch">(Ending 3/24)</span></h2>');
+
+									$(".stayb").remove();
+									$(".dismiss").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".dismiss").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>You wave your hand, your eyelids fluttering and eyes rolling exhaustively. He nods uncertainly, his slippers hissing across the stones as he backs out of the cell. Your chest forces itself to rise, then fall. Faster. Faster. The wood of the bed rattles as your body twitches uncontrollably, the stones stained with a yellow glow. A sob escapes your lips as you notice your skin breaking apart with the light peering out from the cracks and your eyes roll out of agony. A final stab of pain and hiss from within then… white.</p>');
+
+									$(".dia").append('<br><h2>Alone with Care <span class="ch">(Ending 4/24)</span></h2>');						
+
+									$(".stayb").remove();
+									$(".dismiss").remove();
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
 				};
 			});
 
