@@ -461,14 +461,107 @@ $(document).ready(function() {
 
 					$(".dia").append('<p>“W-who…” your chest heaves, threatening to spill dark mucus onto the ornamental rug. The man rolls his eyes, moving out of your vision. “It is of no importance to you, Stranger. Tell me, where do you hail from?” paper rustles on a wooden table as he asks said question. You can say you\'re from the <span class="ch">CITY</span> or from the <span class="ch">COUNTRY</span>.</p>');
 
-					
+					$(".dia").append('<div class="choice"><h3 class="city">CITY</h3></div>');
+					$(".dia").append('<div class="choice"><h3 class="country">COUNTRY</h3></div>');
 
 					$(".whereB").remove();
 					$(".whatB").remove();
 					$(".whoB").remove();
 
 					ch2 = 1;
-				}
+
+					$(".city").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p>“C-city...” you choke. The movement from the man ceases, only interrupted by the hum of glass as a vial rolls openly on the desk. Both your breathings hitch, yours struggling to inhale as the man fails to exhale. He mutters something, then his slippers hiss across the floor as he exits the room. His footsteps echo away from you, silence once more blanketing you like the sweat that sticks to your skin. You can choose to attempt to <span class="ch">ESCAPE</span> or <span class="ch">STAY</span> put.</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="escape">ESCAPE</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="stayb">STAY</h3></div>');
+
+							$(".city").remove();
+							$(".country").remove();
+
+							ch3 = 1;
+
+							$(".escape").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>You force your body off the platform, nearly sending yourself face first onto the cold cobblestones. Dreary adrenaline echoes through your body as you find your balance and stumble to the doorway. Surely you can find the exit of this place, yes? You keep your hand on the left wall, sometimes stopping to catch your breath and rest your aching muscles. You seize up as a sharp roar shoots through the place; the voice of the man. “There they are! Clear the castle! King\'s Suicide!” men and women clad in furs of all sorts stream into a single river of people down the stairs, moving quickly and uniformly to the exit. You merge into the line, ducking down to hide from prying eyes. You nearly trip the person behind you as you yelp in pain, the grey walls soon tainted with a yellowish glow. Before your eyes your skin breaks into sections like a desert floor, the yellow light screaming from said cracks. You yell in agony, dropping to your knees. The crowd is frantic now, running past you with horrific frenzy. You tilt your head in pain, shuddering with such agony then… white.</p>');
+
+									$(".dia").append('<br><h2>A Castle\'s Fall<span class="ch">(Ending 9/24)</span></h2>');
+
+									$(".escape").remove();
+									$(".stay").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".stay").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>You focus on breathing, counting silently in your head to keep rhythm. The bile settles in your stomach safely, and you nearly doze off with the sudden calm before the man returns with several \'friends\'. They surround you with solemn obedience, the man gazing to you gravel at your feet. “Do you know anything of King\'s Suicide, Stranger?” you part your lips, but the man continues on. “It\'s a code between lesser cities. The king intends to wipe us out by sending people of sickness to each cities… not enough to destroy, but certainly enough to damage.” the man clad in furs beside you raises his arm. “These are dire times, Stranger. Our apologies if your mind is filled with innocence and clean of cancer.” silver flashes in the the fur-clad\'s hand. You don\'t realize it is an axe before it rises to full height, then comes cleaving down upon your tender neck.</p>');
+
+									$(".dia").append('<br><h2>Blood\'s Code<span class="ch">(Ending 10/24)</span></h2>');
+
+									$(".escape").remove();
+									$(".stay").remove();
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
+
+					$(".country").click(function() {
+						if(ch3 == 0) {
+							console.log("Choice three complete");
+
+							$(".dia").append('<p> “C-country...” you choke, tears streaming down your cheeks without care. The man nods, pity shining brightly from his skin. “From your clothing I can see you might be from the next town over. If not, they have a rather extensive travel hub you may use. So Stranger, we may go <span class="ch">NOW</span> which is in the birth of dark night or in the <span class="ch">MORNING</span>, your choice."</p>');
+
+							$(".dia").append('<div class="choice"><h3 class="now">NOW</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="morning">MORNING</h3></div>');
+
+							$(".city").remove();
+							$(".country").remove();
+
+							ch3 = 1;
+
+							$(".now").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“N-now, please,” you wheeze. The man nods urgently, his gentle hands hooking you from your armpits to sit up. You turn, foot shaking as it stretches out to the floor. His arm loops under yours to support your weight, and he practically drags you out the door. Several fur-clad lesser sages trail behind you, their eyes wide and their lips sealed. You nods your greetings weakly, your eyes rolling like marbles cast upon the floor. The wagon ride tosses your body into nightmarish fits, pain withheld from the man who sits beside you. The trees arc above you, struggling to hold the army of raindrops back. They mask the sweat that drips from every pore, weak whimpers seeping from your lips. The man’s gaze avoids your body, his goodbyes curt and sullen. You barely catch a few words, among them “I\'m sorry”, “threat”, and the dirty word, “cancer”. Your sullied gaze finds no village, but a wasteland. A yellow glow escapes your skin, the flesh cracking like the desert floor. Your tears of true pain are swept away by the unforgiving wind and hard rain as the world flashes white, the end of all things.</p>');
+
+									$(".dia").append('<br><h2>Abandoned <span class="ch">(Ending 11/24)</span></h2>');
+
+									$(".now").remove();
+									$(".morning").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".morning").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“Wait until…” the next word is swept away by another withheld nauseous heave. “I understand. I will bring supper in a couple hours. Until then, rest.” His footsteps thumped against your skull, bringing on a throbbing headache. You force your eyes closed, shaking the hooks of gravity away. The table you lie upon pulses with psychotic spikes, your hands balling into fists. <em>It\'s all in my mind,</em> you chant. <em>I have to sleep.</em> You count feverishly as the pain swarms onto your skin. <em>One sheep, two sheep...</em> Your body temperature rises with increasing intensity. <em>Three sheep, four sheep...</em> Sweat drips from every pore, freezing daggers dancing across your prone self. <em>Five sheep, six sheep...</em> Your breathing hitches, a shot a pain searing across your flesh sending a screech through your lips. <em>Seven sheep! Eight sheep!</em> You scream desperately. Red sears the back of your eyes, slumber befalling you... forever.</p>');
+
+									$(".dia").append('<br><h2>Neverending Nightmare <span class="ch">(Ending 12/24)</span></h2>');
+
+									$(".now").remove();
+									$(".morning").remove();
+
+									ch4 = 1;
+								};
+							});
+						};
+					});
+				};
 			});
 		};
 	});
