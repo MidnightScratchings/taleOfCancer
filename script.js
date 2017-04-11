@@ -150,13 +150,43 @@ $(document).ready(function() {
 
 							$(".dia").append('<p>“Chicken,” you manage, your mouth revived with gentle saliva thinking of such an item. “Good choice. I\'m well-renowned in this town for being the best chicken roaster.” the woman says with slight sarcasm, chuckling softly as she shuffles around the room and grabbing herbs from nooks and crannies. When you find the strength to sit up, careful to avoid the pile of sludge on the dirt coated floor, the room smells of rosemary and sizzling fat. Such a welcoming scent brings a smile to your face, and even larger one once it touches your tongue. The woman tells of her boys, both long killed in a war you do not recall, though her blushing cheeks ring of nostalgia and not of grief. “I see the food helped your mobility,” she comments as you wobble over to the worn counters to set your finished plate down. “Do you mind taking a helping to the waiter at the local inn? I do it every night, since he\'s such a nice man… however, my back is not what it used to be.” she laughs softly. You can say <span class="ch">YES</span> or <span>NO</span>.</p>');
 
-							$(".dia").append('<div class="choice"><h3 class="yes">YES</h3></div>');
-							$(".dia").append('<div class="choice"><h3 class="no">NO</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="yes1">YES</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="no1">NO</h3></div>');
 
 							$(".chicken").remove();
 							$(".stew").remove();
 
 							ch3 = 1;
+
+							$(".yes1").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>"Of course ma\'am, since you have so graciously fed and watched over me,” you say brightly, searching for the knife to carve the bird with.</p><br><p>“Thank you dear. Consider yourself repaid.” she chuckles softly and watches you stride towards the rotting door of her home, plate in hand. You slip on your socks and shoes, stepping out into the rainy town, which deeply contrasted the simple warmth of the woman’s home. You eventually find the inn, which is bursting with drunken laughter. You dodge the flailing crowd, trailing mud sheepishly into the room as you make your way to the bar. As you approach a man in an impressive red beard calls to you heartily: “Ah, I know Tabath\'s work when I see it! Bring it over, stranger!” you smile, bracing your hand on the bar and sliding the plate towards the waiter. He grins, taking the plate with eagerness. “Thank you, stranger. Give Tabath my compliments.” he turns to reach for a fork as you prepare to face the crowd again. You fall back a little, wincing as your heart throbs jaggedly. “Are you alright?” the waiter inquires with legitimate concern. “F-fine…” you sputter as you fall to your knees, your chin narrowly missing the ledge that would have broken your jaw. The man gasped and scurried around the bar, his cries of concern dulling and blurring along with the constant thrum of the inn. Your eyes roll as your limp body collapses to the floor like an abandoned ragdoll. Searing pain coats your flesh, and you can vaguely see through the fog the waiter\'s eyes go wide and his lips move into a warning cry. The floor rumbles as people stumble to the exit in a panicked hurry, including the man standing above you. Yellow light sears the backs of your eyes, then your vision goes white.</p>');
+
+									$(".dia").append('<br><h2>Kindness Led Astray <span class="ch">(Ending 17/24)</span></h2>');
+
+									$(".yes1").remove();
+									$(".no1").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".no1").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“I-I…” you stutter, your meal throbbing without remorse in your stomach. “I\'m sorry. I don\'t think I\'m well enough to do that." you apologize softly, looking down at the dirty floors embarrassedly. “It\'s alright, dear," the woman says gently, standing up and waddling over to the counter beside you to grasp a carving knife. “I will do it myself. It\'s always a pleasure to see that old man,” she adds teasingly as a slice of chicken falls upon a carefully placed plate. Her cheeks, plump and blushing, break into a smile. “I\'ll be back." gone before a raindrop could fall into the home. Your chest presses a sigh, sending your bare feet back to the bed you rested upon. With a sharp exhale you attempt to rid of the needles of pain stuck in your stomach with no success; instead, agonizing flames race across your skin. A yelp escaped your lips as the feeling persisted, your flesh splitting and cracking like the desert floor with yellow light roaring through said cracks. Your own scream was the only answer you received as your world went white, all feeling lost in a single agonizing moment.</p>');
+
+									$(".dia").append('<br><h2>Unfulfilled Promise <span class="ch">(Ending 18/24)</span></h2>');
+
+									$(".yes1").remove();
+									$(".no1").remove();
+
+									ch4 = 1;
+								};	
+							});
 						};
 					});
 
@@ -173,6 +203,36 @@ $(document).ready(function() {
 							$(".stew").remove();
 
 							ch3 = 1;
+
+							$(".yes2").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>Of course, ma\'am," you answer cheerfully as you whirl to your feet and stroll towards the bucket of stew. </p><br><p>“Consider yourself repaid.” the woman says with a wide smile, then continues to eat her supper. You stumble out of the molding door into the torrent of rain, mud slurping around your shoes. You wander the town for a minute or two before spotting the towering stone castle looming through the foggy, wet landscape. Rapping your knuckle against the towering wooden door, you stand under an overhang with the stew steaming warmly. A man with a hawk-like nose peers through the slightly ajar door, beckoning to you. The interior of the castle was lit with dozens of candle chandeliers, humble and cheery. You stand dripping water onto a worn, dirtied rug, the bowl outstretched to the Sage. He nods, saying his thanks and gently takes it from you. “Tell Tabath my compliments,” he says softly, turning slightly towards an arching doorway where he could retrieve a spoon. You nod, mimicking his movements as you turn to exit the castle when your knees give way. You body crumbles to the floor, and you hear the inquiries of the Sage as if he\'s underwater. Your eyes roll the floor growing hot under your cheek. The candlelit room suddenly shines with a sulphurous yellow light, and your jaw unhinges to release an unholy scream in agony. Then, it all ceases in a single, foul movement, your soul departed.</p>');
+
+									$(".dia").append('<br><h2>Momentus Crypt <span class="ch">(Ending 19/24)</span></h2>');
+
+									$(".yes2").remove();
+									$(".no2").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".no2").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“Sorry,” you wince softly and your hand presses gently against your side, where a knife of pain sliced delicately into your skin. Before you can spurt an explanation, the woman waves her hand. “Say no more. You need to rest.” she stands, empty stew bowl in hand. She waddled over to the pot next to you and began to make a serving. “Lie down, do whatever you need to feel comfortable,” she says curtly as she whisks out into the rain, leaving you standing in the middle of her kitchen. Your feet take you to the edge of the bed, where you twist and lie down as she instructed. Suddenly, it felt wrong to be in her home, to eat her food. She didn’t seem to mind, but it still weighed a bit in your mind. White hot pain stabs into your lungs, and you growl in deep pain. More of these daggers crawl up your abdomen and claw down your legs. You scream, back arching in your agony, the room swirling in painful delirium with a yellow glow. You focus on your chest, trying to force a breath through when you see your flesh cracking like a desert floor, sulphurous light shining through. You yell in shock, the back-end tinged with a growl of torment. Your body burst into sudden agony, and your vision goes white.</p>');
+
+									$(".dia").append('<br><h2>Safely Alone <span class="ch">(Ending 20/24)</span></h2>');
+
+									$(".yes2").remove();
+									$(".no2").remove();
+
+									ch4 = 1;
+								};
+							});
 						};
 					});
 				};
@@ -203,6 +263,36 @@ $(document).ready(function() {
 							$(".dia").append('<div class="choice"><h3 class="out">OUT</h3></div>');
 
 							ch3 = 1;
+
+							$(".protest").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>"Ma\'am I\'m not drunk---"</p><br><p>"I said get out!" she yells, her blushing cheeks red with anger while her brown eyes spark with something more primal. Out of pure fear you pull yourself up to a sitting position and swing your legs over the edge of the bed while the woman stands back with her arms folded tightly. You neary tumble as you attempt to walk,  then scurry towards the molding door. Your bare feet plunge into the gluttonous mud as rain pounds onto your skin with your heart racing. You begin to run, driving your feet deep into the grime without care. Darting towards the main gate, the guards spring to their feet and intercept you with strong arms. A sputter leaves your lips as their trunk-like limbs slam against your stomach, sharp words falling muddled on your ears. Your eyes roll, yellow light illuminating the dark, dull world. The guards warning bellows turn to panicked warnings, their bodies dropping you swiftly onto the ground. You fall like a ragdoll, rain sliding into your glass-like eyes. The earth grew hot against your skin, pulsing hurriedly as pain raced through your veins. Tongue lolled out of your mouth, muffling a screech of agony. Your heartbeat pumped in your ears, growing faster and faster until… white.</p>');
+
+									$(".dia").append('<br><h2>The Earth\'s Sacrifice <span class="ch">(Ending 21/24)</span></h2>');
+
+									$(".protest").remove();
+									$(".out").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".out").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>You sit up, nodding to her words as you stumble to your feet. She steps respectfully out of the way and you slip on your slightly damp socks and shoes before stepping into the mud and rain. You mindlessly wander through the gates of the town, the guards nodding their goodbyes in your direction. Your body trembles as the rain soaks through your being while taking stumbling steps through the gluttonous mud. The road you’re on winds on for miles through dense forest, and in your delirium you forget how long you’ve been wandering. The relentless torrent of rain serves you no clock, and neither does the continuously dark grey sky. The unchanging landscape wrapped itself around your troubled mind, covering it in an endless wave of sickening monotony. The next step you take is in the air, throwing you down a hill littered with cruel roots and clawing branches. You lie on your back, rain mimicking the tears that you fail to summon in the steadily throbbing aura of pain that hovers around you. You gaze upon the dull sky, mind blank to the monotony and agony that claws at your flesh. You groan softly and will your eyes closed. Your heartbeat booms in your ears, growing faster and fast until… darkness.</p>');
+
+									$(".dia").append('<br><h2>Fall of the Mad <span class="ch">(Ending 22/24)</span></h2>');
+
+									$(".protest").remove();
+									$(".out").remove();
+
+									ch4 = 1;
+								};
+							});
 						};
 					});
 
@@ -212,10 +302,40 @@ $(document).ready(function() {
 
 							$(".dia").append('<p>“I…” you swallow rancid bile that had wormed its way up your throat and continue softly. “I don\'t know who I am, or really where I am…” the woman sighs quietly, resting a gentle hand on your shoulder. “I know someone who can help… we can go <span>NOW</span> while we think of it, or we can <span>WAIT</span> until morning when you\'re rested and recovered. Your choice."</p>');
 
-							$(".dia").append('<div class="choice"><h3 class=""></h3></div>');
-							$(".dia").append('<div class="choice"><h3 class=""></h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="nowA">NOW</h3></div>');
+							$(".dia").append('<div class="choice"><h3 class="waitA">WAIT</h3></div>');
 
 							ch3 = 1;
+
+							$(".nowA").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>"Let\'s go now,” you say, surprised at the strength in your voice. Sitting up and swinging your feet over the floor, the woman supports you carefully and helps you to stand upon the ground which is smothered in a blanket of dirt. She slowly walks you over to your socks and shoes, which  you carefully slip on before stumbling into the continuous torrent of rain and significant layer of mud. Through the sheet of water and grey clouds looms a grey stone castle, its massive wooden doors almost beckoning as the two of you trek towards it. They part, revealing a hawk nosed man clad in bundles of fur clothing who steps back to allow you inside. Compared to the worn, dirt-ridden floors of the woman\'s home, the castle was immaculate. Candle chandeliers grinned from the ceiling and walls as you stumbled upon the delicate velvet rug leading to the graceful stone stairs leading to many other levels. “Welcome to Storrho Castle. I am Ionio, Head Sage here.” he bows at the waist slightly, mostly directed at the woman. He gestures towards one of the staircases. “Shall we go?” you nod, stumbling upwards into a seemingly endless castle. Halfway up a flight, you completely crumble to the ground, limbs useless as the woman tries to keep you standing. You hear her cry out to Ionio, whose bellowing voice carries through the stone hallways to summon lesser sages. Your vision swims, blanketing the sounds of the world in a muffled stupor as your eyes roll like marbles. The stones beneath you felt incredibly hot, to the point where even in your delirium you felt yourself scream in agony. Yellow light flooded the stone bricks, then your vision went white.</p>');
+
+									$(".dia").append('<br><h2>Never Down Alone <span class="ch">(Ending 23/24)</span></h2>');
+
+									$(".nowA").remove();
+									$(".waitA").remove();
+
+									ch4 = 1;
+								};
+							});
+
+							$(".waitA").click(function() {
+								if(ch4 == 0) {
+									console.log("Final choice complete");
+
+									$(".dia").append('<p>“W-wait…” you answer hoarsely, your chest heaving to attempt and lift the burden of gravity off your ribcage. The woman places a gentle hand on your shoulder and hushes you quietly. “Don\'t strain yourself... I\'ll get supper ready for you. For now, just rest.” you breathed shallow breaths, unable to even nod your head in answer. You hear the woman\'s feet whisper on the floorboards as she moves away, the silence soon filled with the hollow thunks of a knife against a workboard. Methodical, rhythmic, the way a grandfather clock would lull one into slumber. You focused on this sound, closing your eyes with some difficulty before falling asleep. Your dreams were not kind; they provoked pain into your body that you could not shake off. This was real , white hot pain lapping at your flesh, but you couldn’t wake up. You could hear the woman screaming, <em>pleading</em> for you to do so, but your own body would not follow your mind. The dream world grew brighter in a yellowish glow, then it all disappeared in a searing white flash. Gone.</p>');
+
+									$(".dia").append('<br><h2>Dreamworld <span class="ch">(Ending 24/24)</span></h2>');
+
+									$(".nowA").remove();
+									$(".waitA").remove();
+
+									ch4 = 1;
+								};
+							});
 						};
 					});
 				};
